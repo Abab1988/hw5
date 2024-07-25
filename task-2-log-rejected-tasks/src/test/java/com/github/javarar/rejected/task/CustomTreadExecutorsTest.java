@@ -36,7 +36,7 @@ public class CustomTreadExecutorsTest {
             //Ждем, когда все потоки отработают
             Thread.sleep(3000);
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            Thread.currentThread().interrupt();
         }
         // Очередь на 10 задач + 10 активных потоков итого 20 задач должно обработаться, остальные не должны добавиться в очередь задач
         // Сумма членов арифметической прогрессии (1 + 20) / 2 * 20 = 210
